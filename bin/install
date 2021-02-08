@@ -49,11 +49,7 @@ install() {
 get_filename() {
   local version="$1"
   local platform="$2"
-  if "${platform}" == "windows"; then
-    echo "kn-${platform}.exe"
-  else
-    echo "kn-${platform}"
-  fi
+  echo "kn-${platform}"
 }
 
 get_download_url() {
