@@ -38,6 +38,7 @@ install() {
 
     echo "Extracting ${toolname} archive"
     mv "${download_path}" "${binary_path}"
+    chmod +x "${binary_path}"
   else
     echo "Error: ${toolname} version ${version} not found" >&2
     exit 1
@@ -48,7 +49,7 @@ install() {
 get_filename() {
   local version="$1"
   local platform="$2"
-  if ${platform} == "windows"; then
+  if "${platform}" == "windows"; then
     echo "kn-${platform}.exe"
   else
     echo "kn-${platform}"
