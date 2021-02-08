@@ -37,7 +37,7 @@ install() {
     mkdir -p "${bin_install_path}"
 
     echo "Extracting ${toolname} archive"
-    mv "${download_path}" "${bin_install_path}"
+    mv "${download_path}" "${binary_path}"
   else
     echo "Error: ${toolname} version ${version} not found" >&2
     exit 1
@@ -48,7 +48,7 @@ install() {
 get_filename() {
   local version="$1"
   local platform="$2"
-  if ${toolname} == "windows"; then
+  if ${platform} == "windows"; then
     echo "kn-${platform}.exe"
   else
     echo "kn-${platform}"

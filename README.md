@@ -18,7 +18,7 @@ asdf install kn 0.20.0
 Direct call, for local development.
 ```sh
 ASDF_INSTALL_TYPE=test \
-  ASDF_INSTALL_VERSION=3.2.1 \
+  ASDF_INSTALL_VERSION=0.20.0 \
   ASDF_INSTALL_PATH=/tmp/plugin \
   ./bin/install
 ```
